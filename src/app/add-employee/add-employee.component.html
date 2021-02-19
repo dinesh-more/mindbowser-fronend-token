@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <form #addEmpForm="ngForm" (ngSubmit)="addEmp(addEmpForm)">
+                <h3 class="text-center">Add Employee</h3>
+                <div class="form-group">
+                    <label>Firstname</label>
+                    <input ngModel type="text" name="firstname" #firstname="ngModel" class="form-control"
+                        placeholder="firstname" [(ngModel)]="empDetails.firstname">
+                </div>
+                <div class="form-group">
+                    <label>Lastname</label>
+                    <input ngModel type="text" name="lastname" #lastname="ngModel" class="form-control"
+                        placeholder="Lastname" [(ngModel)]="empDetails.lastname">
+                </div>
+                <div class="form-group">
+                    <label>Address</label>
+                    <input ngModel type="text" name="address" #address="ngModel" class="form-control"
+                        placeholder="Address" [(ngModel)]="empDetails.address">
+                </div>
+                <div class="form-group">
+                    <label>DOB</label>
+                    <input ngModel type="text" name="dob" #dob="ngModel" class="form-control"
+                        placeholder="DOB" [(ngModel)]="empDetails.dob">
+                </div>
+                <div class="form-group">
+                    <label>Mobile</label>
+                    <input ngModel type="text" name="mobile" #mobile="ngModel" class="form-control"
+                        placeholder="Mobile" [(ngModel)]="empDetails.mobile">
+                </div>
+                <div class="form-group">
+                    <label>City</label>
+                    <input ngModel type="text" name="city" #city="ngModel" class="form-control"
+                        placeholder="City" [(ngModel)]="empDetails.city">
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-warning">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

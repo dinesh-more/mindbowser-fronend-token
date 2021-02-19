@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Empid</th>
+                    <th scope="col">Firstname</th>
+                    <th scope="col">Lastname</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Dob</th>
+                    <th scope="col">Mobile</th>
+                    <th scope="col">City</th>
+                    <th scope="col">Update</th>
+                    <th scope="col">Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let i of empDetails">
+                    <td>{{ i.empid }}</td>
+                    <td>{{ i.firstname }}</td>
+                    <td>{{ i.lastname }}</td>
+                    <td>{{ i.address }}</td>
+                    <td>{{ i.dob }}</td>
+                    <td>{{ i.mobile }}</td>
+                    <td>{{ i.city }}</td>
+                    <td class="text-center">
+                        <a routerLink="/update-employee/{{ i.empid }}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                    </td>
+                    <td class="text-center">
+                        <i (click)="deleteEmployee(i.empid)" class="fa fa-trash" aria-hidden="true"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
